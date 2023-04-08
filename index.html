@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h4>FACTORIAL TABLE:</h4>
+       <input type="text" id="userInput">
+       <button onclick="torial()">Get Factorial</button> <br><br><br>
+       <div id="fac" style="border:2px solid red;width:400px;height:50px;text-align:center;line-height:50px;">
+       </div>
+    </div>
+    <script>
+        //   Factorial
+        function torial(){
+            var number = parseInt(userInput.value);
+        if (number < 0) {
+            fac.innerHTML= `Error!. This is a Negative Number!`;
+        }
+        else if (number === 0) {
+            fac.innerHTML = `The factorial of ${number} is 1`;
+        }
+        else {
+            var fact = 1;
+            for (i = 1; i <= number; i++) {
+                fact *= i;
+            }
+            fac.innerHTML= `The factorial of ${number} is ${fact}.`;
+        }
+        }
+    </script>
+</body>
+</html>
